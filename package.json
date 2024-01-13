@@ -1,17 +1,29 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "nuxt": "^3.9.1",
-    "vue": "^3.4.10",
-    "vue-router": "^4.2.5"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "prisma": {
+        "seed": "npx ts-node --esm prisma/seeder.ts"
+    },
+    "devDependencies": {
+        "@faker-js/faker": "^8.3.1",
+        "@nuxtjs/tailwindcss": "^6.10.4",
+        "nuxt": "^3.9.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3",
+        "vue": "^3.4.10",
+        "vue-router": "^4.2.5"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.8.0",
+        "prisma": "^5.8.0",
+        "prisma-extension-pagination": "^0.6.0"
+    }
 }
